@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>✨ Una Sorpresa Mágica ✨</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Dancing+Script:wght@700&family=Pacifico&display=swap"
@@ -34,8 +34,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow-x: hidden;
             color: white;
+            padding: 10px;
         }
 
         /* Fondo de Estrellas Animado Mejorado */
@@ -139,7 +140,7 @@
 
         /* Contenedor Principal con Efecto Glassmorphism Mejorado */
         .container {
-            width: 90%;
+            width: 95%;
             max-width: 500px;
             position: relative;
             z-index: 10;
@@ -150,8 +151,8 @@
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 2px solid var(--glass-border);
-            border-radius: 30px;
-            padding: 50px 35px;
+            border-radius: 25px;
+            padding: 40px 25px;
             text-align: center;
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
                 inset 0 0 20px rgba(255, 255, 255, 0.05);
@@ -164,6 +165,8 @@
             opacity: 0;
             pointer-events: none;
             display: none;
+            max-height: 95vh;
+            overflow-y: auto;
         }
 
         .glass-card.active {
@@ -182,7 +185,7 @@
             right: -2px;
             bottom: -2px;
             background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
-            border-radius: 30px;
+            border-radius: 25px;
             z-index: -1;
             opacity: 0;
             transition: opacity 0.3s;
@@ -211,15 +214,15 @@
             }
 
             50% {
-                transform: translate(-50%, -50%) translateY(-15px);
+                transform: translate(-50%, -50%) translateY(-10px);
             }
         }
 
         /* Tipografía Mejorada */
         h1 {
             font-family: 'Dancing Script', cursive;
-            font-size: 4rem;
-            margin-bottom: 20px;
+            font-size: 3rem;
+            margin-bottom: 15px;
             background: linear-gradient(45deg, #fff, #ff6b9d, #ffd700, #7c4dff);
             background-size: 300% 300%;
             -webkit-background-clip: text;
@@ -241,9 +244,9 @@
         }
 
         p {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            margin-bottom: 25px;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
             color: rgba(255, 255, 255, 0.95);
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
@@ -252,17 +255,17 @@
         .btn {
             background: linear-gradient(45deg, var(--secondary), var(--primary));
             border: none;
-            padding: 18px 50px;
+            padding: 15px 40px;
             color: white;
             border-radius: 50px;
-            font-size: 1.15rem;
+            font-size: 1rem;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 0 8px 25px rgba(124, 77, 255, 0.5),
                 0 0 0 0 rgba(255, 107, 157, 0.4);
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             position: relative;
             overflow: hidden;
             transform: translateY(0);
@@ -294,8 +297,8 @@
         }
 
         .btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(255, 107, 157, 0.7),
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 12px 30px rgba(255, 107, 157, 0.7),
                 0 0 30px rgba(124, 77, 255, 0.5);
         }
 
@@ -308,15 +311,15 @@
         }
 
         .btn:active {
-            transform: translateY(-2px) scale(1.02);
+            transform: translateY(-1px) scale(1.01);
         }
 
         /* Pastel CSS 3D Mejorado */
         .cake-container {
             position: relative;
-            width: 250px;
-            height: 250px;
-            margin: 0 auto 30px;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 25px;
             perspective: 1000px;
         }
 
@@ -325,10 +328,10 @@
             bottom: 20px;
             left: 50%;
             transform: translateX(-50%) rotateX(10deg);
-            width: 180px;
-            height: 120px;
+            width: 150px;
+            height: 100px;
             background: linear-gradient(to bottom, #f8c291 0%, #e17055 100%);
-            border-radius: 15px 15px 5px 5px;
+            border-radius: 12px 12px 5px 5px;
             box-shadow: inset 0 -15px rgba(0, 0, 0, 0.2),
                 0 10px 30px rgba(0, 0, 0, 0.3);
             animation: cake-float 3s ease-in-out infinite;
@@ -349,12 +352,12 @@
         .cake::before {
             content: '';
             position: absolute;
-            top: 40px;
-            left: -8px;
-            width: 196px;
-            height: 25px;
+            top: 35px;
+            left: -6px;
+            width: 162px;
+            height: 20px;
             background: linear-gradient(to right, #ff6b9d, #e84393, #ff6b9d);
-            border-radius: 15px;
+            border-radius: 12px;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2),
                 inset 0 2px 5px rgba(255, 255, 255, 0.3);
         }
@@ -365,7 +368,7 @@
             bottom: -5px;
             left: 50%;
             transform: translateX(-50%);
-            width: 200px;
+            width: 170px;
             height: 10px;
             background: rgba(0, 0, 0, 0.2);
             border-radius: 50%;
@@ -375,34 +378,34 @@
         /* Decoraciones del pastel */
         .cake-decoration {
             position: absolute;
-            width: 15px;
-            height: 15px;
+            width: 12px;
+            height: 12px;
             background: linear-gradient(45deg, #ffd700, #ffed4e);
             border-radius: 50%;
             box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
         }
 
         .cake-decoration:nth-child(2) {
-            top: 50px;
-            left: 20px;
+            top: 45px;
+            left: 18px;
             animation: glow 1.5s infinite;
         }
 
         .cake-decoration:nth-child(3) {
-            top: 50px;
-            right: 20px;
+            top: 45px;
+            right: 18px;
             animation: glow 1.5s 0.3s infinite;
         }
 
         .cake-decoration:nth-child(4) {
-            top: 70px;
-            left: 40px;
+            top: 60px;
+            left: 35px;
             animation: glow 1.5s 0.6s infinite;
         }
 
         .cake-decoration:nth-child(5) {
-            top: 70px;
-            right: 40px;
+            top: 60px;
+            right: 35px;
             animation: glow 1.5s 0.9s infinite;
         }
 
@@ -422,11 +425,11 @@
 
         .candle {
             position: absolute;
-            top: -45px;
+            top: -40px;
             left: 50%;
             transform: translateX(-50%);
-            width: 18px;
-            height: 45px;
+            width: 16px;
+            height: 40px;
             background: linear-gradient(to right, #e74c3c 0%, #c0392b 50%, #e74c3c 100%);
             border-radius: 4px;
             box-shadow: inset 2px 0 5px rgba(0, 0, 0, 0.3),
@@ -439,7 +442,7 @@
             top: -3px;
             left: 50%;
             transform: translateX(-50%);
-            width: 20px;
+            width: 18px;
             height: 5px;
             background: #34495e;
             border-radius: 50%;
@@ -447,11 +450,11 @@
 
         .flame {
             position: absolute;
-            top: -30px;
+            top: -28px;
             left: 50%;
             transform: translateX(-50%);
-            width: 20px;
-            height: 30px;
+            width: 18px;
+            height: 26px;
             background: radial-gradient(ellipse at center, #ffeb3b 0%, #ff9800 50%, #f44336 100%);
             border-radius: 50% 50% 20% 20%;
             box-shadow: 0 0 20px #ff9800,
@@ -468,8 +471,8 @@
             top: 5px;
             left: 50%;
             transform: translateX(-50%);
-            width: 10px;
-            height: 15px;
+            width: 9px;
+            height: 13px;
             background: radial-gradient(ellipse at center, #fff 0%, #ffeb3b 100%);
             border-radius: 50%;
             animation: inner-flicker 0.2s infinite alternate;
@@ -526,8 +529,8 @@
 
         .balloon {
             position: absolute;
-            width: 60px;
-            height: 75px;
+            width: 50px;
+            height: 65px;
             border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
             animation: float-balloon 6s ease-in-out infinite;
         }
@@ -535,21 +538,21 @@
         .balloon::before {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: -12px;
             left: 50%;
             transform: translateX(-50%);
             width: 2px;
-            height: 80px;
+            height: 60px;
             background: rgba(255, 255, 255, 0.3);
         }
 
         .balloon::after {
             content: '';
             position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 15px;
-            height: 20px;
+            top: 8px;
+            left: 8px;
+            width: 12px;
+            height: 16px;
             background: rgba(255, 255, 255, 0.4);
             border-radius: 50%;
             filter: blur(2px);
@@ -557,29 +560,29 @@
 
         .balloon:nth-child(1) {
             background: linear-gradient(135deg, #ff6b9d, #ff8fab);
-            top: 20%;
-            left: 10%;
+            top: 15%;
+            left: 8%;
             animation-delay: 0s;
         }
 
         .balloon:nth-child(2) {
             background: linear-gradient(135deg, #7c4dff, #9575ff);
-            top: 40%;
-            right: 10%;
+            top: 35%;
+            right: 8%;
             animation-delay: 1s;
         }
 
         .balloon:nth-child(3) {
             background: linear-gradient(135deg, #ffd700, #ffe44d);
-            top: 60%;
-            left: 15%;
+            top: 55%;
+            left: 12%;
             animation-delay: 2s;
         }
 
         .balloon:nth-child(4) {
             background: linear-gradient(135deg, #00e5ff, #4df3ff);
-            top: 15%;
-            right: 20%;
+            top: 12%;
+            right: 15%;
             animation-delay: 0.5s;
         }
 
@@ -591,15 +594,15 @@
             }
 
             50% {
-                transform: translateY(-30px) rotate(5deg);
+                transform: translateY(-25px) rotate(5deg);
             }
         }
 
         /* Regalo Interactivo */
         .gift-box {
             position: relative;
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             margin: 0 auto 20px;
             cursor: pointer;
             transition: transform 0.3s;
@@ -630,8 +633,8 @@
         }
 
         .gift-base {
-            width: 100px;
-            height: 70px;
+            width: 90px;
+            height: 63px;
             background: linear-gradient(135deg, var(--primary), #e84393);
             border-radius: 5px;
             position: absolute;
@@ -640,24 +643,24 @@
         }
 
         .gift-lid {
-            width: 110px;
-            height: 30px;
+            width: 99px;
+            height: 27px;
             background: linear-gradient(135deg, #ff8fab, var(--primary));
             border-radius: 5px;
             position: absolute;
             top: 0;
-            left: -5px;
+            left: -4.5px;
             transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .gift-box.opened .gift-lid {
-            transform: translateY(-80px) rotateX(45deg);
+            transform: translateY(-72px) rotateX(45deg);
         }
 
         .gift-ribbon-v {
-            width: 15px;
-            height: 100px;
+            width: 13px;
+            height: 90px;
             background: linear-gradient(to right, var(--accent), #ffe44d);
             position: absolute;
             left: 50%;
@@ -666,22 +669,22 @@
         }
 
         .gift-ribbon-h {
-            width: 110px;
-            height: 15px;
+            width: 99px;
+            height: 13px;
             background: linear-gradient(to bottom, var(--accent), #ffe44d);
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            left: -5px;
+            left: -4.5px;
         }
 
         .gift-bow {
-            width: 40px;
-            height: 25px;
+            width: 36px;
+            height: 22px;
             background: var(--accent);
             border-radius: 50% 50% 0 0;
             position: absolute;
-            top: -15px;
+            top: -13px;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -690,39 +693,39 @@
         .gift-bow::after {
             content: '';
             position: absolute;
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             background: var(--accent);
             border-radius: 50%;
             top: 0;
         }
 
         .gift-bow::before {
-            left: -15px;
+            left: -13px;
         }
 
         .gift-bow::after {
-            right: -15px;
+            right: -13px;
         }
 
         /* Contador Regresivo */
         .countdown {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin: 30px 0;
+            gap: 10px;
+            margin: 25px 0;
         }
 
         .countdown-item {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 15px;
+            border-radius: 12px;
+            padding: 12px 8px;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .countdown-value {
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: 700;
             background: linear-gradient(45deg, var(--accent), var(--primary));
             -webkit-background-clip: text;
@@ -731,26 +734,26 @@
         }
 
         .countdown-label {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             color: rgba(255, 255, 255, 0.7);
             margin-top: 5px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         /* Galería de Fotos/Recuerdos */
         .memory-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            gap: 12px;
             margin: 20px 0;
         }
 
         .memory-card {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 25px;
+            border-radius: 18px;
+            padding: 20px 15px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer;
@@ -770,25 +773,25 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 3rem;
+            font-size: 2.5rem;
             opacity: 0.6;
         }
 
         .memory-card.completed::after {
             content: '✓';
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 8px;
+            right: 8px;
             background: #4caf50;
             color: white;
-            width: 30px;
-            height: 30px;
+            width: 26px;
+            height: 26px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1rem;
             box-shadow: 0 3px 10px rgba(76, 175, 80, 0.5);
         }
 
@@ -804,8 +807,8 @@
         }
 
         .memory-card:not(.locked):hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.4);
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 12px 35px rgba(255, 107, 157, 0.4);
         }
 
         .memory-card:not(.locked):hover::before {
@@ -813,8 +816,8 @@
         }
 
         .memory-icon {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2.2rem;
+            margin-bottom: 8px;
             display: block;
             animation: bounce-icon 2s infinite;
         }
@@ -827,12 +830,12 @@
             }
 
             50% {
-                transform: translateY(-10px);
+                transform: translateY(-8px);
             }
         }
 
         .memory-text {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 600;
         }
 
@@ -865,11 +868,11 @@
         /* Reproductor de Música Mejorado */
         .music-control {
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: 15px;
+            right: 15px;
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(15px);
-            padding: 15px;
+            padding: 12px;
             border-radius: 50%;
             cursor: pointer;
             z-index: 100;
@@ -918,11 +921,11 @@
         /* Modo Oscuro / Claro Toggle */
         .theme-toggle {
             position: fixed;
-            top: 20px;
-            left: 20px;
+            top: 15px;
+            left: 15px;
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(15px);
-            padding: 15px;
+            padding: 12px;
             border-radius: 50%;
             cursor: pointer;
             z-index: 100;
@@ -941,9 +944,9 @@
         .wish-message {
             background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 107, 157, 0.2));
             border: 2px solid var(--accent);
-            border-radius: 20px;
-            padding: 20px;
-            margin: 20px 0;
+            border-radius: 18px;
+            padding: 18px;
+            margin: 18px 0;
             font-style: italic;
             box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
             animation: glow-border 2s infinite;
@@ -977,98 +980,95 @@
         .complete-btn {
             background: linear-gradient(45deg, #4caf50, #45a049);
             border: none;
-            padding: 12px 35px;
+            padding: 12px 30px;
             color: white;
             border-radius: 50px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.4s;
             box-shadow: 0 5px 20px rgba(76, 175, 80, 0.5);
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-top: 20px;
+            margin-top: 18px;
         }
 
         .complete-btn:hover {
-            transform: translateY(-3px) scale(1.05);
+            transform: translateY(-3px) scale(1.03);
             box-shadow: 0 10px 30px rgba(76, 175, 80, 0.7);
         }
 
-        /* Adaptabilidad Móvil */
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2.8rem;
-            }
-
-            .glass-card {
-                padding: 35px 25px;
-            }
-
-            .balloon {
-                width: 40px;
-                height: 50px;
-            }
-
-            .cake {
-                width: 150px;
-                height: 100px;
-            }
-
-            .memory-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .countdown {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* ... este es el final de tu código actual ... */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- PEGA ESTO AQUÍ (ANTES DE CERRAR STYLE) --- */
+        /* Toast Notifications */
         #toast-container {
-            position: fixed; top: 20px; right: 20px; z-index: 10000;
-            display: flex; flex-direction: column; gap: 15px; pointer-events: none;
+            position: fixed; 
+            top: 70px; 
+            right: 15px; 
+            z-index: 10000;
+            display: flex; 
+            flex-direction: column; 
+            gap: 12px; 
+            pointer-events: none;
+            max-width: calc(100vw - 30px);
         }
+
         .floating-toast {
             background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3); border-left: 5px solid var(--accent);
-            color: white; padding: 15px 25px; border-radius: 12px;
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3); 
+            border-left: 5px solid var(--accent);
+            color: white; 
+            padding: 12px 20px; 
+            border-radius: 12px;
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-            min-width: 300px; transform: translateX(120%); transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            display: flex; align-items: center; gap: 15px; font-family: 'Poppins', sans-serif; pointer-events: auto;
+            min-width: 250px;
+            max-width: 100%;
+            transform: translateX(120%); 
+            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            font-family: 'Poppins', sans-serif; 
+            pointer-events: auto;
         }
-        .floating-toast.show { transform: translateX(0); }
-        .floating-toast i { font-size: 1.5rem; color: var(--accent); }
-        .floating-toast span { font-size: 0.95rem; font-weight: 500; }
 
-                /* --- ESTILOS MODO CLARO (LIGHT MODE) --- */
+        .floating-toast.show { 
+            transform: translateX(0); 
+        }
+
+        .floating-toast i { 
+            font-size: 1.3rem; 
+            color: var(--accent); 
+        }
+
+        .floating-toast span { 
+            font-size: 0.85rem; 
+            font-weight: 500; 
+        }
+
+        /* Estilos modo claro */
         body.light-mode {
-            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); /* Fondo blanco suave */
-            color: #333; /* Texto oscuro */
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            color: #333;
         }
 
-        /* Ocultar estrellas en modo claro para que se vea limpio */
         body.light-mode .stars,
         body.light-mode .twinkling,
         body.light-mode .shooting-stars {
             display: none;
         }
 
-        /* Ajustar las tarjetas de vidrio para que se vean bien sobre blanco */
         body.light-mode .glass-card {
             background: rgba(255, 255, 255, 0.65);
             border: 1px solid rgba(0, 0, 0, 0.1);
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
         }
 
-        /* Cambiar color de textos en modo claro */
         body.light-mode p, 
         body.light-mode .countdown-label {
             color: #444;
@@ -1081,6 +1081,269 @@
             -webkit-text-fill-color: transparent;
         }
 
+        /* MEDIA QUERIES PARA MÓVILES */
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 12px;
+            }
+
+            .glass-card {
+                padding: 25px 18px;
+                border-radius: 20px;
+                max-height: 90vh;
+            }
+
+            p {
+                font-size: 0.9rem;
+                line-height: 1.5;
+                margin-bottom: 15px;
+            }
+
+            .btn {
+                padding: 12px 30px;
+                font-size: 0.85rem;
+                letter-spacing: 1px;
+            }
+
+            .balloon {
+                width: 35px;
+                height: 45px;
+            }
+
+            .balloon::before {
+                height: 45px;
+            }
+
+            .cake-container {
+                width: 160px;
+                height: 160px;
+                margin-bottom: 20px;
+            }
+
+            .cake {
+                width: 120px;
+                height: 80px;
+            }
+
+            .cake::before {
+                width: 130px;
+                height: 16px;
+                top: 28px;
+                left: -5px;
+            }
+
+            .cake::after {
+                width: 140px;
+            }
+
+            .cake-decoration {
+                width: 10px;
+                height: 10px;
+            }
+
+            .cake-decoration:nth-child(2),
+            .cake-decoration:nth-child(3) {
+                top: 38px;
+            }
+
+            .cake-decoration:nth-child(4),
+            .cake-decoration:nth-child(5) {
+                top: 52px;
+            }
+
+            .candle {
+                width: 14px;
+                height: 35px;
+                top: -35px;
+            }
+
+            .flame {
+                width: 16px;
+                height: 24px;
+                top: -26px;
+            }
+
+            .gift-box {
+                width: 75px;
+                height: 75px;
+            }
+
+            .gift-base {
+                width: 75px;
+                height: 52px;
+            }
+
+            .gift-lid {
+                width: 82px;
+                height: 23px;
+                left: -3.5px;
+            }
+
+            .gift-box.opened .gift-lid {
+                transform: translateY(-60px) rotateX(45deg);
+            }
+
+            .gift-ribbon-v {
+                width: 11px;
+                height: 75px;
+            }
+
+            .gift-ribbon-h {
+                width: 82px;
+                height: 11px;
+                left: -3.5px;
+            }
+
+            .gift-bow {
+                width: 30px;
+                height: 18px;
+                top: -11px;
+            }
+
+            .gift-bow::before,
+            .gift-bow::after {
+                width: 15px;
+                height: 15px;
+            }
+
+            .gift-bow::before {
+                left: -11px;
+            }
+
+            .gift-bow::after {
+                right: -11px;
+            }
+
+            .memory-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .memory-card {
+                padding: 18px 12px;
+            }
+
+            .memory-icon {
+                font-size: 2rem;
+            }
+
+            .memory-text {
+                font-size: 0.8rem;
+            }
+
+            .countdown {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
+            .countdown-item {
+                padding: 10px 6px;
+            }
+
+            .countdown-value {
+                font-size: 1.4rem;
+            }
+
+            .countdown-label {
+                font-size: 0.65rem;
+            }
+
+            .music-control,
+            .theme-toggle {
+                padding: 10px;
+                top: 12px;
+            }
+
+            .music-control {
+                right: 12px;
+            }
+
+            .theme-toggle {
+                left: 12px;
+            }
+
+            .music-control i,
+            .theme-toggle i {
+                font-size: 1.1rem;
+            }
+
+            .wish-message {
+                padding: 15px;
+                margin: 15px 0;
+                border-radius: 15px;
+            }
+
+            .complete-btn {
+                padding: 10px 25px;
+                font-size: 0.85rem;
+                margin-top: 15px;
+            }
+
+            #toast-container {
+                top: 60px;
+                right: 10px;
+                gap: 10px;
+            }
+
+            .floating-toast {
+                min-width: 200px;
+                padding: 10px 15px;
+            }
+
+            .floating-toast i {
+                font-size: 1.1rem;
+            }
+
+            .floating-toast span {
+                font-size: 0.8rem;
+            }
+
+            /* Ajustes para el detailContent en móviles */
+            #detailContent h2 {
+                font-size: 1.8rem !important;
+            }
+
+            #detailContent p {
+                font-size: 0.95rem !important;
+            }
+
+            #detailContent img {
+                max-width: 100% !important;
+            }
+        }
+
+        /* Media query para pantallas muy pequeñas */
+        @media (max-width: 360px) {
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            .glass-card {
+                padding: 20px 15px;
+            }
+
+            p {
+                font-size: 0.85rem;
+            }
+
+            .btn {
+                padding: 10px 25px;
+                font-size: 0.8rem;
+            }
+
+            .countdown-value {
+                font-size: 1.2rem;
+            }
+
+            .memory-icon {
+                font-size: 1.8rem;
+            }
+        }
     </style> 
 </head>
 
@@ -1127,7 +1390,7 @@
 
         <!-- Pantalla 1: Bienvenida -->
         <div class="glass-card active" id="screen1">
-            <div style="font-size: 5rem; margin-bottom: 20px; animation: bounce-icon 2s infinite;">✨</div>
+            <div style="font-size: 4rem; margin-bottom: 15px; animation: bounce-icon 2s infinite;">✨</div>
             <h1>¡Hola mi amor!</h1>
             <p>Hoy el universo brilla un poco más fuerte...</p>
             <p id="waitMessage">Prepárate para una experiencia mágica llena de sorpresas 🌟</p>
@@ -1188,7 +1451,7 @@
 
         <!-- Pantalla 3: Regalo Sorpresa -->
         <div class="glass-card" id="screen3">
-            <h1 style="font-size: 2.8rem;">¡Sorpresa!</h1>
+            <h1 style="font-size: 2.5rem;">¡Sorpresa!</h1>
             <p>Tienes un regalo especial esperándote...</p>
             <p><strong>Haz clic en la caja</strong> para abrirlo 🎁</p>
 
@@ -1201,7 +1464,7 @@
             </div>
 
             <div class="hidden" id="giftContent">
-                <p id="typewriter" style="min-height: 80px; font-style: italic; font-size: 1.05rem;"></p>
+                <p id="typewriter" style="min-height: 70px; font-style: italic; font-size: 0.95rem;"></p>
             </div>
 
             <button class="btn hidden" id="btn-after-gift" onclick="goToScreen(4)">
@@ -1211,7 +1474,7 @@
 
         <!-- Pantalla 4: Celebración Final -->
         <div class="glass-card" id="screen4">
-            <h1 style="font-size: 3rem;">¡Feliz Cumpleaños!</h1>
+            <h1 style="font-size: 2.5rem;">¡Feliz Cumpleaños!</h1>
             <p>Tienes 4 sorpresas, ve en orden para desbloquear las siguientes</p>
 
             <div class="memory-grid">
@@ -1241,7 +1504,7 @@
             </div>
 
             <!-- Contenedor de detalles -->
-            <div id="detailContainer" class="hidden" style="margin-top: 30px;">
+            <div id="detailContainer" class="hidden" style="margin-top: 25px;">
                 <div class="wish-message" id="detailContent" style="animation: fadeIn 0.5s;">
                     <!-- Aquí se mostrará el contenido dinámico -->
                 </div>
@@ -1249,17 +1512,17 @@
                     <i class="fas fa-check-circle"></i> Marcar como Completada
                 </button>
                 <button class="btn" onclick="closeDetail()"
-                    style="margin-top: 15px; padding: 12px 35px; font-size: 1rem;">
+                    style="margin-top: 15px; padding: 12px 30px; font-size: 0.95rem;">
                     <i class="fas fa-arrow-left"></i> Volver
                 </button>
             </div>
 
-            <p id="mainMessage" style="margin-top: 25px; font-size: 1.1rem;">
+            <p id="mainMessage" style="margin-top: 20px; font-size: 1rem;">
                 Que este nuevo año de vida esté lleno de momentos inolvidables,
                 risas interminables y sueños cumplidos, te amo mucho mi pollito lindo✨
             </p>
 
-            <button class="btn" id="celebrateBtn" onclick="celebrate()" style="margin-top: 20px;">
+            <button class="btn" id="celebrateBtn" onclick="celebrate()" style="margin-top: 18px;">
                 <i class="fas fa-champagne-glasses"></i> ¡CELEBRAR! 🎊
             </button>
         </div>
@@ -1282,10 +1545,10 @@
         // Crear partículas flotantes
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < 15; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
-                particle.style.width = Math.random() * 8 + 3 + 'px';
+                particle.style.width = Math.random() * 6 + 2 + 'px';
                 particle.style.height = particle.style.width;
                 particle.style.left = Math.random() * 100 + '%';
                 particle.style.animationDelay = Math.random() * 15 + 's';
@@ -1297,12 +1560,11 @@
         // Contador regresivo animado
         function updateCountdown() {
             const now = new Date();
-            const targetDate = new Date('2026-02-07T19:38:00'); // 9 de febrero 2026, 12:00 AM
+            const targetDate = new Date('2026-02-07T19:38:00');
 
             const difference = targetDate - now;
 
             if (difference <= 0) {
-                // El contador llegó a 0 - desbloquear
                 document.getElementById('days').textContent = '00';
                 document.getElementById('hours').textContent = '00';
                 document.getElementById('minutes').textContent = '00';
@@ -1312,7 +1574,6 @@
                 return;
             }
 
-            // Calcular tiempo restante
             const days = Math.floor(difference / (1000 * 60 * 60 * 24));
             const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
@@ -1329,16 +1590,13 @@
             const startBtn = document.getElementById('startBtn');
             const waitMessage = document.getElementById('waitMessage');
 
-            // Desbloquear botón
             startBtn.disabled = false;
             startBtn.style.opacity = '1';
             startBtn.style.cursor = 'pointer';
             startBtn.innerHTML = '<i class="fas fa-rocket"></i> ¡Comenzar Aventura!';
 
-            // Cambiar mensaje
             waitMessage.innerHTML = '¡Es tu día especial! La aventura está lista para comenzar 🎉';
 
-            // Animar el botón
             startBtn.style.animation = 'pulse-music 1s infinite';
         }
 
@@ -1346,7 +1604,6 @@
         function goToScreen(screenNum) {
             document.querySelector('.glass-card.active').classList.remove('active');
 
-            // Actualizar barra de progreso
             const progress = (screenNum / 4) * 100;
             document.getElementById('progressBar').style.width = progress + '%';
 
@@ -1354,7 +1611,6 @@
                 document.getElementById('screen' + screenNum).classList.add('active');
                 currentScreen = screenNum;
 
-                // Confeti de bienvenida en pantalla 3
                 if (screenNum === 3) {
                     confetti({
                         particleCount: 100,
@@ -1382,30 +1638,12 @@
             isMusicPlaying = !isMusicPlaying;
         }
 
-        // Toggle de tema (efecto visual)
-        function toggleTheme() {
-            isDarkMode = !isDarkMode;
-            const themeIcon = document.getElementById('themeIcon');
-            const body = document.body;
-
-            if (!isDarkMode) {
-                body.style.background = 'radial-gradient(circle at center, #e3f2fd 0%, #bbdefb 100%)';
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            } else {
-                body.style.background = 'radial-gradient(circle at center, #1a0b2e 0%, #000000 100%)';
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            }
-        }
-
         // Soplar vela mejorado
         function blowCandle() {
             const flame = document.getElementById('flame');
             if (!flame.classList.contains('off')) {
                 flame.classList.add('off');
 
-                // Efecto de humo y chispas
                 for (let i = 0; i < 3; i++) {
                     setTimeout(() => {
                         confetti({
@@ -1421,13 +1659,11 @@
                     }, i * 200);
                 }
 
-                // Mostrar mensaje de deseo
                 setTimeout(() => {
                     document.getElementById('wishMessage').classList.remove('hidden');
                     document.getElementById('wishMessage').style.animation = "fadeIn 1s";
                 }, 500);
 
-                // Mostrar botón
                 setTimeout(() => {
                     document.getElementById('btn-after-cake').classList.remove('hidden');
                     document.getElementById('btn-after-cake').style.animation = "fadeIn 1.5s";
@@ -1441,7 +1677,6 @@
             if (!giftBox.classList.contains('opened')) {
                 giftBox.classList.add('opened');
 
-                // Explosión de confeti del regalo
                 setTimeout(() => {
                     confetti({
                         particleCount: 150,
@@ -1454,13 +1689,11 @@
                     });
                 }, 300);
 
-                // Mostrar contenido del regalo
                 setTimeout(() => {
                     document.getElementById('giftContent').classList.remove('hidden');
                     startTypewriter();
                 }, 800);
 
-                // Mostrar botón
                 setTimeout(() => {
                     document.getElementById('btn-after-gift').classList.remove('hidden');
                     document.getElementById('btn-after-gift').style.animation = "fadeIn 1s";
@@ -1486,10 +1719,8 @@
 
         // Mostrar detalles de cada tarjeta
         function showDetail(type, index) {
-            // Verificar si la tarjeta está bloqueada
             const card = document.getElementById('card-' + type);
             if (card.classList.contains('locked')) {
-                // Mostrar mensaje de que debe completar las anteriores
                 confetti({
                     particleCount: 30,
                     spread: 50,
@@ -1514,20 +1745,20 @@
             switch (type) {
                 case 'amor':
                     content = `
-                        <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.5rem; margin-bottom: 15px; color: var(--primary);">
+                        <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.2rem; margin-bottom: 12px; color: var(--primary);">
                             ❤️ Nuestro Momento
                         </h2>
-                        <div style="margin: 20px 0;">
-                            <div style="width: 200px; height: 200px; margin: 0 auto; border-radius: 20px; background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 5px; box-shadow: 0 10px 40px rgba(255, 107, 157, 0.5);">
-                                <div style="width: 100%; height: 100%; border-radius: 16px; overflow: hidden; background: #1a0b2e;">
+                        <div style="margin: 18px 0;">
+                            <div style="width: 180px; height: 180px; margin: 0 auto; border-radius: 18px; background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 4px; box-shadow: 0 10px 40px rgba(255, 107, 157, 0.5);">
+                                <div style="width: 100%; height: 100%; border-radius: 14px; overflow: hidden; background: #1a0b2e;">
                                     <img src="img/tatiana1.jpeg" alt="Nosotros" style="width: 100%; height: 100%; object-fit: cover;">
                                 </div>
                             </div>
                         </div>
-                        <p style="font-size: 1.2rem; line-height: 1.8; margin-top: 20px;">
+                        <p style="font-size: 1.05rem; line-height: 1.6; margin-top: 18px;">
                             Eres la persona más especial en mi vida y cada momento contigo es un regalo ✨
                         </p>
-                        <p style="font-size: 1.4rem; font-weight: 700; margin-top: 20px; color: var(--accent);">
+                        <p style="font-size: 1.2rem; font-weight: 700; margin-top: 18px; color: var(--accent);">
                             Te amo muchísimo 💕
                         </p>
                     `;
@@ -1535,24 +1766,24 @@
 
                 case 'pelicula':
                     content = `
-                        <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.5rem; margin-bottom: 15px; color: var(--primary);">
+                        <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.2rem; margin-bottom: 12px; color: var(--primary);">
                             🎬 Noche de Película
                         </h2>
-                        <p style="font-size: 1.2rem; line-height: 1.8;">
+                        <p style="font-size: 1.05rem; line-height: 1.6;">
                             ¡Vamos a revivir esos momentos mágicos de películas del colegio!
                         </p>
-                        <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px; margin: 20px 0;">
-                            <p style="font-size: 1.3rem; font-weight: 700; color: var(--accent);">
+                        <div style="background: rgba(255, 255, 255, 0.1); padding: 18px; border-radius: 15px; margin: 18px 0;">
+                            <p style="font-size: 1.15rem; font-weight: 700; color: var(--accent);">
                                 📅 9 de Febrero
                             </p>
-                            <p style="font-size: 1.3rem; font-weight: 700; color: var(--accent); margin-top: 10px;">
+                            <p style="font-size: 1.15rem; font-weight: 700; color: var(--accent); margin-top: 10px;">
                                 🕖 7:00 PM - 9:00 PM
                             </p>
-                            <p style="font-size: 1.2rem; margin-top: 15px;">
+                            <p style="font-size: 1.05rem; margin-top: 12px;">
                                 Septimo vicio
                             </p>
                         </div>
-                        <p style="font-size: 1rem; font-style: italic; opacity: 0.9;">
+                        <p style="font-size: 0.95rem; font-style: italic; opacity: 0.9;">
                             Palomitas, risas y recuerdos... ¡como en los viejos tiempos! 🍿🎉
                         </p>
                     `;
@@ -1560,16 +1791,16 @@
 
                 case 'cena':
                     content = `
-                        <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.5rem; margin-bottom: 15px; color: var(--primary);">
+                        <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.2rem; margin-bottom: 12px; color: var(--primary);">
                             🍰 Cena Especial
                         </h2>
-                        <p style="font-size: 1.2rem; line-height: 1.8;">
+                        <p style="font-size: 1.05rem; line-height: 1.6;">
                             Después de disfrutar la película, tendremos una cena deliciosa para celebrar tu día especial
                         </p>
-                        <p style="font-size: 1.3rem; font-weight: 700; margin-top: 20px; color: var(--accent);">
+                        <p style="font-size: 1.15rem; font-weight: 700; margin-top: 18px; color: var(--accent);">
                             🕘 Después de la película (9:00 PM)
                         </p>
-                        <p style="font-size: 1rem; margin-top: 15px; font-style: italic; opacity: 0.9;">
+                        <p style="font-size: 0.95rem; margin-top: 12px; font-style: italic; opacity: 0.9;">
                             Preparada para disfrutar juntos 🍽️✨
                         </p>
                     `;
@@ -1577,16 +1808,16 @@
 
                 case 'regalo':
                     content = `
-                        <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.5rem; margin-bottom: 15px; color: var(--primary);">
+                        <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.2rem; margin-bottom: 12px; color: var(--primary);">
                             🎁 Tu Regalo Te Espera
                         </h2>
-                        <p style="font-size: 1.2rem; line-height: 1.8;">
+                        <p style="font-size: 1.05rem; line-height: 1.6;">
                             Tu regalo especial está esperándote en un lugar muy especial...
                         </p>
-                        <p style="font-size: 1.5rem; font-weight: 700; margin-top: 20px; color: var(--accent);">
+                        <p style="font-size: 1.3rem; font-weight: 700; margin-top: 18px; color: var(--accent);">
                             📍 Donde siempre que pasas escuchas la radio
                         </p>
-                        <p style="font-size: 1rem; margin-top: 15px; font-style: italic; opacity: 0.9;">
+                        <p style="font-size: 0.95rem; margin-top: 12px; font-style: italic; opacity: 0.9;">
                             Ve a buscarlo y descubre la sorpresa que tengo para ti ✨
                         </p>
                     `;
@@ -1595,22 +1826,18 @@
 
             detailContent.innerHTML = content;
 
-            // Mostrar u ocultar botón de completar según el estado
             if (completedTasks[index]) {
                 completeBtn.style.display = 'none';
             } else {
                 completeBtn.style.display = 'inline-block';
             }
 
-            // Ocultar elementos principales
             memoryGrid.style.display = 'none';
             mainMessage.style.display = 'none';
             celebrateBtn.style.display = 'none';
 
-            // Mostrar detalles
             detailContainer.classList.remove('hidden');
 
-            // Confeti especial
             confetti({
                 particleCount: 80,
                 spread: 70,
@@ -1623,24 +1850,19 @@
         function completeTask() {
             if (currentTaskIndex === -1) return;
 
-            // Marcar como completada
             completedTasks[currentTaskIndex] = true;
 
-            // Actualizar visual de la tarjeta
             const cards = ['amor', 'pelicula', 'cena', 'regalo'];
             const currentCard = document.getElementById('card-' + cards[currentTaskIndex]);
             currentCard.classList.add('completed');
 
-            // Desbloquear siguiente tarjeta
             if (currentTaskIndex < 3) {
                 const nextCard = document.getElementById('card-' + cards[currentTaskIndex + 1]);
                 nextCard.classList.remove('locked');
             }
 
-            // Ocultar botón de completar
             document.getElementById('completeBtn').style.display = 'none';
 
-            // Confeti de celebración
             confetti({
                 particleCount: 150,
                 spread: 120,
@@ -1651,21 +1873,17 @@
                 scalar: 1.2
             });
 
-            // Mensaje de éxito MEJORADO
-        setTimeout(() => {
-            if (currentTaskIndex < 3) {
-                // Mensaje intermedio
-                mostrarMensaje('¡Completado! ✓\nLa siguiente sorpresa ha sido desbloqueada 🎉', 'fa-lock-open');
-            } else {
-                // Mensaje final
-                mostrarMensaje('¡Todas las sorpresas completadas! ✓\n¡Feliz cumpleaños mi amor! 🎊❤️', 'fa-heart');
-                
-                // Un poco más de confeti al final no hace daño
-                confetti({
-                    particleCount: 200, spread: 120, origin: { y: 0.6 }
-                });
-            }
-        }, 500);
+            setTimeout(() => {
+                if (currentTaskIndex < 3) {
+                    mostrarMensaje('¡Completado! ✓\nLa siguiente sorpresa ha sido desbloqueada 🎉', 'fa-lock-open');
+                } else {
+                    mostrarMensaje('¡Todas las sorpresas completadas! ✓\n¡Feliz cumpleaños mi amor! 🎊❤️', 'fa-heart');
+                    
+                    confetti({
+                        particleCount: 200, spread: 120, origin: { y: 0.6 }
+                    });
+                }
+            }, 500);
         }
 
         // Cerrar detalles
@@ -1695,7 +1913,6 @@
                 return Math.random() * (max - min) + min;
             }
 
-            // Confeti continuo
             const interval = setInterval(function () {
                 const timeLeft = animationEnd - Date.now();
 
@@ -1717,7 +1934,6 @@
                 }));
             }, 250);
 
-            // Fuegos artificiales especiales
             setTimeout(() => {
                 confetti({
                     particleCount: 200,
@@ -1742,11 +1958,53 @@
                 });
             }, 4000);
 
-            // Cambiar botón
             const btn = document.querySelector('#screen4 .btn');
             btn.innerHTML = "<i class='fas fa-heart'></i> ¡QUE SIGA LA FIESTA! 🥂";
             btn.style.background = "linear-gradient(45deg, #ffd700, #ff6b9d)";
             btn.style.animation = "pulse-music 1s infinite";
+        }
+
+        // Toast notifications
+        function mostrarMensaje(texto, icono = 'fa-check-circle') {
+            let container = document.getElementById('toast-container');
+            if (!container) {
+                container = document.createElement('div');
+                container.id = 'toast-container';
+                document.body.appendChild(container);
+            }
+            const toast = document.createElement('div');
+            toast.className = 'floating-toast';
+            toast.innerHTML = `<i class="fas ${icono}"></i><span>${texto.replace(/\n/g, '<br>')}</span>`;
+            container.appendChild(toast);
+            
+            setTimeout(() => toast.classList.add('show'), 100);
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 600);
+            }, 5000);
+        }
+
+        // Cambiar tema
+        function cambiarTema() {
+            const body = document.body;
+            const boton = document.querySelector('.theme-toggle');
+            const icono = boton.querySelector('i');
+
+            body.classList.toggle('light-mode');
+
+            if (body.classList.contains('light-mode')) {
+                icono.classList.remove('fa-moon');
+                icono.classList.add('fa-sun');
+                icono.style.color = "#ff9800";
+                
+                mostrarMensaje('¡Modo Claro activado! ☀️', 'fa-sun');
+            } else {
+                icono.classList.remove('fa-sun');
+                icono.classList.add('fa-moon');
+                icono.style.color = "";
+                
+                mostrarMensaje('¡Modo Oscuro activado! 🌙', 'fa-moon');
+            }
         }
 
         // Inicialización
@@ -1764,56 +2022,6 @@
                 firstInteraction = false;
             }
         }, { once: true });
-
-            /* --- PEGAR ESTO JUSTO DEBAJO DE <script> --- */
-    function mostrarMensaje(texto, icono = 'fa-check-circle') {
-        let container = document.getElementById('toast-container');
-        if (!container) {
-            container = document.createElement('div');
-            container.id = 'toast-container';
-            document.body.appendChild(container);
-        }
-        const toast = document.createElement('div');
-        toast.className = 'floating-toast';
-        toast.innerHTML = `<i class="fas ${icono}"></i><span>${texto.replace(/\n/g, '<br>')}</span>`;
-        container.appendChild(toast);
-        
-        // Animación y sonido
-        setTimeout(() => toast.classList.add('show'), 100);
-        // Eliminar después de 5 segundos
-        setTimeout(() => {
-            toast.classList.remove('show');
-            setTimeout(() => toast.remove(), 600);
-        }, 5000);
-    }
-
-        /* --- FUNCIÓN PARA CAMBIAR TEMA (MODO CLARO/OSCURO) --- */
-    function cambiarTema() {
-        const body = document.body;
-        const boton = document.querySelector('.theme-toggle');
-        const icono = boton.querySelector('i');
-
-        // 1. Alternar la clase 'light-mode' en el cuerpo
-        body.classList.toggle('light-mode');
-
-        // 2. Cambiar el icono (Luna <-> Sol)
-        if (body.classList.contains('light-mode')) {
-            icono.classList.remove('fa-moon');
-            icono.classList.add('fa-sun');
-            icono.style.color = "#ff9800"; // Sol naranja
-            
-            // Mensaje opcional (borrar si no te gusta)
-            mostrarMensaje('¡Modo Claro activado! ☀️', 'fa-sun');
-        } else {
-            icono.classList.remove('fa-sun');
-            icono.classList.add('fa-moon');
-            icono.style.color = ""; // Volver al color original
-            
-            // Mensaje opcional
-            mostrarMensaje('¡Modo Oscuro activado! 🌙', 'fa-moon');
-        }
-    }
     </script>
 </body>
-
 </html>
