@@ -269,6 +269,10 @@
             position: relative;
             overflow: hidden;
             transform: translateY(0);
+            z-index: 10;
+            pointer-events: auto;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .btn::before {
@@ -463,6 +467,21 @@
             animation: flicker 0.3s infinite alternate, flame-dance 2s ease-in-out infinite;
             cursor: pointer;
             transition: opacity 0.5s, transform 0.5s;
+            z-index: 10;
+            pointer-events: auto;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        /* Área de toque más grande para la vela en móviles */
+        .flame::after {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            z-index: -1;
         }
 
         .flame::before {
@@ -606,6 +625,11 @@
             margin: 0 auto 20px;
             cursor: pointer;
             transition: transform 0.3s;
+            z-index: 10;
+            pointer-events: auto;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            padding: 10px;
         }
 
         .gift-box:hover {
@@ -759,6 +783,11 @@
             cursor: pointer;
             position: relative;
             overflow: hidden;
+            z-index: 5;
+            pointer-events: auto;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            min-height: 100px;
         }
 
         .memory-card.locked {
@@ -991,6 +1020,11 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 18px;
+            z-index: 10;
+            pointer-events: auto;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            position: relative;
         }
 
         .complete-btn:hover {
@@ -1105,9 +1139,23 @@
             }
 
             .btn {
-                padding: 12px 30px;
-                font-size: 0.85rem;
+                padding: 15px 35px;
+                font-size: 0.9rem;
                 letter-spacing: 1px;
+                min-height: 50px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .btn::before {
+                content: '';
+                position: absolute;
+                top: -10px;
+                left: -10px;
+                right: -10px;
+                bottom: -10px;
+                z-index: -1;
             }
 
             .balloon {
@@ -1163,14 +1211,22 @@
             }
 
             .flame {
-                width: 16px;
-                height: 24px;
+                width: 20px;
+                height: 28px;
                 top: -26px;
+            }
+            
+            .flame::after {
+                top: -20px;
+                left: -20px;
+                right: -20px;
+                bottom: -20px;
             }
 
             .gift-box {
-                width: 75px;
-                height: 75px;
+                width: 80px;
+                height: 80px;
+                padding: 15px;
             }
 
             .gift-base {
@@ -1279,9 +1335,23 @@
             }
 
             .complete-btn {
-                padding: 10px 25px;
-                font-size: 0.85rem;
+                padding: 14px 28px;
+                font-size: 0.9rem;
                 margin-top: 15px;
+                min-height: 48px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .complete-btn::before {
+                content: '';
+                position: absolute;
+                top: -10px;
+                left: -10px;
+                right: -10px;
+                bottom: -10px;
+                z-index: -1;
             }
 
             #toast-container {
@@ -1618,6 +1688,8 @@
                         origin: { y: 0.6 },
                         colors: ['#ff6b9d', '#7c4dff', '#ffd700']
                     });
+                    // Configurar eventos táctiles para el regalo
+                    setTimeout(setupGiftTouch, 100);
                 }
             }, 400);
         }
@@ -1671,6 +1743,18 @@
             }
         }
 
+        // Mejorar eventos táctiles para móviles
+        document.addEventListener('DOMContentLoaded', function() {
+            // Agregar soporte táctil para la vela
+            const flame = document.getElementById('flame');
+            if (flame) {
+                flame.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    blowCandle();
+                }, { passive: false });
+            }
+        });
+
         // Abrir regalo con explosión de confeti
         function openGift() {
             const giftBox = document.getElementById('giftBox');
@@ -1698,6 +1782,17 @@
                     document.getElementById('btn-after-gift').classList.remove('hidden');
                     document.getElementById('btn-after-gift').style.animation = "fadeIn 1s";
                 }, 3000);
+            }
+        }
+
+        // Mejorar eventos táctiles para el regalo
+        function setupGiftTouch() {
+            const giftBox = document.getElementById('giftBox');
+            if (giftBox) {
+                giftBox.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    openGift();
+                }, { passive: false });
             }
         }
 
@@ -2024,4 +2119,5 @@
         }, { once: true });
     </script>
 </body>
+
 </html>
