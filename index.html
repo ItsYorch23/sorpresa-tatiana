@@ -144,6 +144,7 @@
             max-width: 500px;
             position: relative;
             z-index: 10;
+            height: 600px; /* ALTURA FIJA PARA EL CONTENEDOR PRINCIPAL */
         }
 
         .glass-card {
@@ -165,7 +166,8 @@
             opacity: 0;
             pointer-events: none;
             display: none;
-            max-height: 95vh;
+            /* ALTURA FIJA Y OVERFLOW */
+            height: 600px;
             overflow-y: auto;
         }
 
@@ -1087,15 +1089,19 @@
                 padding: 5px;
             }
 
-            h1 {
-                font-size: 2.2rem;
-                margin-bottom: 12px;
+            .container {
+                height: 550px; /* ALTURA FIJA AJUSTADA PARA MÓVIL */
             }
 
             .glass-card {
                 padding: 25px 18px;
                 border-radius: 20px;
-                max-height: 90vh;
+                height: 550px; /* ALTURA FIJA AJUSTADA PARA MÓVIL */
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 12px;
             }
 
             p {
@@ -1319,12 +1325,17 @@
 
         /* Media query para pantallas muy pequeñas */
         @media (max-width: 360px) {
-            h1 {
-                font-size: 1.9rem;
+            .container {
+                height: 500px; /* ALTURA FIJA AJUSTADA PARA PANTALLAS PEQUEÑAS */
             }
 
             .glass-card {
                 padding: 20px 15px;
+                height: 500px; /* ALTURA FIJA AJUSTADA PARA PANTALLAS PEQUEÑAS */
+            }
+
+            h1 {
+                font-size: 1.9rem;
             }
 
             p {
