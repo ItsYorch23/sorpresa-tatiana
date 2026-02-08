@@ -1492,25 +1492,21 @@
                 <!-- Sorpresa 1: Mucho Amor (desbloqueada) -->
                 <div class="memory-card" id="card-amor" onclick="showDetail('amor', 0)">
                     <span class="memory-icon">🩶</span>
-                    <span class="memory-text">Mucho Amor</span>
                 </div>
 
                 <!-- Sorpresa 2: Película (bloqueada) -->
                 <div class="memory-card locked" id="card-pelicula" onclick="showDetail('pelicula', 1)">
                     <span class="memory-icon">🎉</span>
-                    <span class="memory-text">Película</span>
                 </div>
 
                 <!-- Sorpresa 3: Cena Especial (bloqueada) -->
                 <div class="memory-card locked" id="card-cena" onclick="showDetail('cena', 2)">
                     <span class="memory-icon">🍰</span>
-                    <span class="memory-text">Cena Especial</span>
                 </div>
 
                 <!-- Sorpresa 4: Regalo (bloqueada) -->
                 <div class="memory-card locked" id="card-regalo" onclick="showDetail('regalo', 3)">
                     <span class="memory-icon">🎁</span>
-                    <span class="memory-text">Regalo</span>
                 </div>
             </div>
 
@@ -1571,7 +1567,7 @@
         // Contador regresivo animado
         function updateCountdown() {
             const now = new Date();
-            const targetDate = new Date('2026-02-07T20:45:00');
+            const targetDate = new Date('2026-02-09T00:00:00');
 
             const difference = targetDate - now;
 
@@ -1714,7 +1710,7 @@
 
         // Efecto Máquina de Escribir Mejorado
         function startTypewriter() {
-            const text = "Eres la persona más increíble del mundo y mereces todo lo bonito que te pasa. Que este nuevo año de vida esté lleno de aventuras, sonrisas y momentos felices mi amor. ¡Te amo muchísimo! ❤️✨";
+            const text = "Eres la persona más increíble del mundo y mereces todo lo bonito que te pasa. Que este nuevo año de vida esté lleno de aventuras, sonrisas y momentos felices mi amor. ¡Te amo muchísimo! 🩶✨";
             const container = document.getElementById('typewriter');
             let index = 0;
 
@@ -1757,7 +1753,7 @@
                 case 'amor':
                     content = `
                         <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.2rem; margin-bottom: 12px; color: var(--primary);">
-                            🩶 
+                            🩶 Nuestro Momento
                         </h2>
                         <div style="margin: 18px 0;">
                             <div style="width: 180px; height: 180px; margin: 0 auto; border-radius: 18px; background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 4px; box-shadow: 0 10px 40px rgba(255, 107, 157, 0.5);">
@@ -1778,7 +1774,7 @@
                 case 'pelicula':
                     content = `
                         <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.2rem; margin-bottom: 12px; color: var(--primary);">
-                            🎬 
+                            🎬 Noche de Película
                         </h2>
                         <p style="font-size: 1.05rem; line-height: 1.6;">
                             ¡Vamos a revivir esos momentos mágicos de películas del colegio!
@@ -1803,7 +1799,7 @@
                 case 'cena':
                     content = `
                         <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.2rem; margin-bottom: 12px; color: var(--primary);">
-                            🍰 
+                            🍰 Cena Especial
                         </h2>
                         <p style="font-size: 1.05rem; line-height: 1.6;">
                             Después de disfrutar la película, tendremos una cena deliciosa para celebrar tu día especial
@@ -1820,7 +1816,7 @@
                 case 'regalo':
                     content = `
                         <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.2rem; margin-bottom: 12px; color: var(--primary);">
-                            🎁 
+                            🎁 Tu Regalo Te Espera
                         </h2>
                         <p style="font-size: 1.05rem; line-height: 1.6;">
                             Tu regalo especial está esperándote en un lugar muy especial...
